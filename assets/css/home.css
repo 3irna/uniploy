@@ -1,0 +1,446 @@
+body {
+    background-color: #171e22;
+!important;
+}
+
+.plinko-bg-img {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+}
+
+.plinko-profile-image {
+    height: 50px;
+!important;
+}
+
+.plinko-text-footer {
+    font-weight: bolder;
+!important;
+    color: #10002b;
+!important;
+}
+
+.plinko-footer {
+    background-color: black;
+    position: fixed;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    box-shadow: 0 -1px 0 0 white;
+}
+
+.plinko-header {
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+}
+
+#home {
+    background-repeat: no-repeat;
+    background-size: 100% 15%;
+}
+
+.plinko-icon-size {
+    font-size: 25px;
+!important;
+}
+
+.plinko-point-text {
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+!important;
+}
+
+.plinko-small-text {
+    font-size: 15px;
+    color: #d6d4c5;
+    font-weight: 500;
+
+}
+
+.plinko-text-friend {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.plinko-earn-div {
+    flex: auto;
+    margin-right: 5px;
+}
+
+.plinko-earn-btn {
+    float: right;
+}
+
+.plinko-mr-4 {
+    margin-right: 10px;
+}
+
+.plinko-text-earn {
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.plinko-scroll-earn {
+    height: 330px;
+    overflow: auto;
+    width: 75%;
+}
+
+.plinko-scroll-friend {
+    /*height: 200px;*/
+    overflow: auto;
+}
+
+.plinko-text-shadow {
+    font-weight: 700;
+}
+
+.plinko-refferal-box {
+    background-color: #73737329;
+    border-radius: 4px;
+!important;
+    box-shadow: 6px 0 0 0 #5a189a;
+!important;
+}
+
+.plinko-loading-image {
+    width: 100%;
+    position: fixed;
+}
+
+.plinko-main-coin {
+    margin-top: 10px;
+    width: 75%;
+}
+
+.plinko-logo-icon {
+    width: 35px;
+    vertical-align: text-bottom;
+}
+
+#point {
+    font-size: 38px;
+}
+
+.plinko-inline-block-right {
+    display: inline-block;
+    float: right;
+}
+
+.plinko-inline-block {
+    display: inline-block;
+}
+
+.plinko-copy-link-btn {
+    float: right;
+}
+
+.progress-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.progress {
+    height: 6px;
+    width: 60%;
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: none;
+    margin-bottom: 15px;
+    overflow: visible;
+}
+
+.progress .progress-bar {
+    box-shadow: 0px 0px 3px 1px rgb(255 210 0);
+    border-radius: 30px;
+    position: relative;
+    animation: animate-positive 2s;
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shake {
+    animation: shake 0.2s;
+}
+
+.plinko-loading-spinner {
+    color: #e0aaff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.plinko-footer-icons {
+    width: 35px;
+}
+
+.plinko-ml-2 {
+    margin-left: 10px;
+}
+
+.nav-link {
+    padding: 0.4rem 0.9rem;
+}
+
+.plinko-text-footer-size {
+    font-size: 0.8rem;
+    text-shadow: 0 0 20px #FFFFFF;
+}
+
+.plinko-header-icon {
+    padding: 25px 55px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.plinko-header-image {
+    width: 100%;
+}
+
+.plinko-header-app-name {
+    font-size: 25px;
+    color: #ffffff;
+    padding-top: 25px;
+    font-weight: 400;
+}
+
+.plinko-btn {
+    border-radius: 20px;
+    width: 22%;
+    height: 30px;
+    color: black;
+    font-weight: 900;
+    padding: 0;
+}
+
+.plinko-btn-players {
+    border-radius: 15px;
+    width: 32%;
+    color: #252525;
+    font-weight: 800;
+    padding: 0;
+}
+
+.plinko-total-players-box-item {
+    background-color: #252525c4;
+    border-radius: 20px;
+    height: 85%;
+    box-shadow: 0 -1px white;
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+.plinko-now-level-text {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.plinko-next-level-text {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.plinko-icon-size-home {
+    width: 25px;
+}
+
+.plinko-icon-size-players {
+    width: 35px;
+}
+
+.btn-success {
+    background-color: #52ed89;
+    box-shadow: 0 0 10px 2px #52ed898a;
+}
+
+.btn-success:hover {
+    background-color: #52ed89;
+    box-shadow: 0 0 10px 2px #52ed898a;
+}
+
+.btn-warning {
+    background-color: #edcd52;
+}
+
+.plinko-bottom-bar-text {
+    font-size: 20px;
+    bottom: 15px;
+    color: #edb502;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.plinko-bottom-bar {
+    width: 40%;
+}
+
+.plinko-players-box {
+    background-color: #393939ba;
+    height: 330px;
+    width: 85%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.plinko-players-box-item {
+    background-color: #252525c4;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: 0 -1px white;
+}
+
+.part1, part2, part3 {
+    display: inline-block;
+}
+
+.part1 {
+    font-weight: 700;
+}
+
+.part2 {
+    margin-left: 6px;
+}
+
+.players-list {
+    margin-left: 10px;
+}
+
+.score-text-players {
+    text-align: right;
+    font-size: 8px;
+    position: relative;
+    top: 7px;
+    right: 10px;
+}
+
+.rank-text-players {
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.plinko-shape {
+    background-color: red;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-right: 3px;
+    box-shadow: 0px 0px 9px 1px red;
+}
+
+.first-shape-color {
+    background-color: #edcd52;
+    box-shadow: 0px 0px 9px 1px #edcd52;
+}
+
+.second-shape-color {
+    background-color: #c7c7c7;
+    box-shadow: 0px 0px 9px 1px #c7c7c7;
+}
+
+.third-shape-color {
+    background-color: #a4511a;
+    box-shadow: 0px 0px 9px 1px #a4511a;
+}
+
+.you-shape-color {
+    background-color: #00ce0a;
+    box-shadow: 0px 0px 9px 1px #00ce0a;
+}
+
+.plinko-total-players-box {
+    height: 130px;
+    overflow: auto;
+    width: 75%;
+}
+
+.tot-upper {
+    background-color: #edcd52;
+    border-radius: 20px;
+    text-align: center;
+    height: 30px;
+    color: #252525;
+    /* padding: 10px; */
+    width: 95%;
+    margin-left: 6px;
+    margin-top: 3px;
+    font-weight: 700;
+}
+
+.tot-lower {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 430px) {
+    .plinko-icon-size-home {
+        width: 15px;
+    }
+
+    .plinko-icon-size-players {
+        width: 20px;
+    }
+
+}

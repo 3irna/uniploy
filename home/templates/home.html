@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {#    <div id="loading_page">#}
+    {#        <img class="plinko-loading-image" src="{% static 'images/3.jpg' %}" alt="">#}
+    {#        <div class="text-center plinko-loading-spinner">#}
+    {#            <div class="spinner-border" role="status">#}
+    {#                <span class="visually-hidden">Loading...</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {##}
+    {#    </div>#}
+    <div id="home" hidden>
+
+        <div class="container">
+            <div class="d-flex justify-content-center mt-4 mb-2">
+                <button type="button" class="btn btn-success btn-sm plinko-btn mx-1">level 01</button>
+                <span class="text-secondary mx-1"> | </span>
+                <button type="button" class="btn btn-warning btn-sm plinko-btn mx-1"
+                        onclick="show_page('players',this.id)">
+                    Players
+                    <img src="{% static 'images/tas1.png' %}" class="plinko-icon-size-home">
+                </button>
+                <button type="button" class="btn btn-warning btn-sm plinko-btn mx-1">
+                    Guide
+                    <img src="{% static 'images/guide.png' %}" class="plinko-icon-size-home">
+                </button>
+            </div>
+
+            <div class="d-flex text-center mt-4">
+                <span class="text-white plinko-now-level-text">LV.1</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width:20%; background:rgb(255, 210, 0);"></div>
+                </div>
+                <span class="text-white plinko-next-level-text">LV.2</span>
+            </div>
+
+            <div class="text-center font-weight-light plinko-point-text">
+                <div class="plinko-text-shadow">
+                    <span id="point">0</span>
+                    <img src="{% static 'images/logo.png' %}" class="plinko-logo-icon">
+                </div>
+            </div>
+
+            <div class="earn_coin text-center">
+                <img id="click_to_coin" class="plinko-main-coin" src="{% static 'images/coin.png' %}">
+
+                <div class="d-flex text-center mt-4">
+                    <span class="text-white plinko-now-level-text" style="bottom: 9px">
+                        <img src="{% static 'images/energy.png' %}" alt="">
+                        <span id="point_can_take">100</span>/
+                        <span id="pool_size">8888</span>
+                    </span>
+                    <div class="progress plinko-bottom-bar">
+                        <div class="progress-bar"
+                             style="width:20%; background:#00ff00;box-shadow: 0 0 3px 1px #00ff00;"></div>
+                    </div>
+                    <span class="plinko-next-level-text plinko-bottom-bar-text">
+                        +<span id="point_per_tap">1</span>
+                        <img src="{% static 'images/logo.png' %}" class="plinko-icon-size" style="width: 25px">
+                    </span>
+                    <span class="plinko-next-level-text text-white plinko-ml-2">Profit Perhit</span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="wallet" hidden>
+        <div class="container">
+            <div class="text-center font-weight-light plinko-point-text mt-5">
+                <div class="inline">Wallets</div>
+            </div>
+            <div class="text-center font-weight-light plinko-point-text mt-15">
+                <div class="inline">Comin sooon</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="friend" class="container" hidden>
+{#        <div class="d-flex align-items-center p-2 my-2 text-white rounded plinko-refferal-box">#}
+{#            <img class="plinko-logo-icon plinko-mr-4" src="{% static 'images/social/shibacopy.png' %}" alt=""#}
+{#                 width="48" height="38">#}
+{#            <div class="lh-1">#}
+{#                <h1 class="h6 mb-0 text-white lh-1 plink">#}
+{#                    Inite friends and receive <span class="font-weight-bold">+500 SHIB</span> for each friend's#}
+{#                    registration.#}
+{#                </h1>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="d-flex align-items-center p-2 my-2 text-white rounded plinko-refferal-box">#}
+{#            <img class="plinko-logo-icon plinko-mr-4" src="{% static 'images/social/shibacopy.png' %}" alt=""#}
+{#                 width="48" height="38">#}
+{#            <div class="lh-1">#}
+{#                <h1 class="h6 mb-0 text-white lh-1 plink">#}
+{#                    Inite friends and receive <span class="font-weight-bold">+500 SHIB</span> for each friend's#}
+{#                    registration.#}
+{#                </h1>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="text-center font-weight-light plinko-point-text">#}
+{#            <div class="inline"><i class="fa fa-gbp font-weight-bold"></i> 2,400</div>#}
+{#        </div>#}
+{##}
+{#        <div class="text-right plinko-text-friend">#}
+{#            <div class="plinko-inline-block">Your friends</div>#}
+{#            <div class="plinko-inline-block-right">2</div>#}
+{#        </div>#}
+{##}
+{#        <div class="plinko-scroll-friend mb-2">#}
+{#            <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                <img class="plinko-logo-icon plinko-mr-4" src="/static/images/anrays-update.png" alt=""#}
+{#                     width="48" height="38">#}
+{#                <div class="lh-1">#}
+{#                    <h1 class="h6 mb-0 text-white lh-1 plinko-text-earn">Reza</h1>#}
+{#                </div>#}
+{#                <div class="plinko-earn-div">#}
+{#                    <div class="plinko-inline-block-right"><i class="fa fa-rub font-weight-bold"></i> 2</div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                <img class="plinko-logo-icon plinko-mr-4" src="/static/images/anrays-update.png" alt=""#}
+{#                     width="48" height="38">#}
+{#                <div class="lh-1">#}
+{#                    <h1 class="h6 mb-0 text-white lh-1 plinko-text-earn">Arya</h1>#}
+{#                </div>#}
+{#                <div class="plinko-earn-div">#}
+{#                    <div class="plinko-inline-block-right"><i class="fa fa-rub font-weight-bold"></i> 563,000</div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <button class="btn btn-info" type="button">Invite your friends <i class="fa fa-telegram"></i></button>#}
+{#            <button class="btn btn-info plinko-copy-link-btn" type="button">Copy <i class="fa fa-copy"></i>#}
+{#            </button>#}
+{#        </div>#}
+    </div>
+
+    <div id="earn" hidden>
+{#        <div class="container">#}
+{#            <div class="text-center">#}
+{#                <img src="{% static 'images/loading.webp' %}" width="180px">#}
+{#            </div>#}
+{#            <div class="plinko-scroll-earn">#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4"#}
+{#                         src="{% static '/images/social/instagram.png' %}" alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plinko-text-earn">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4"#}
+{#                         src="{% static '/images/social/telegram.png' %}" alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4" src="{% static '/images/social/tiktak.png' %}"#}
+{#                         alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4"#}
+{#                         src="{% static '/images/social/youtube.png' %}" alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4" src="{% static '/images/social/x.png' %}"#}
+{#                         alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4" src="/static/images/anrays-update.png" alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="d-flex align-items-center p-1 my-1 text-white rounded shadow-sm plinko-bg-color-img">#}
+{#                    <img class="rounded plinko-profile-image plinko-mr-4" src="/static/images/anrays-update.png" alt=""#}
+{#                         width="48" height="38">#}
+{#                    <div class="lh-1">#}
+{#                        <h1 class="h6 mb-0 text-white lh-1 plink">welcome bonus</h1>#}
+{#                        <h2 class="plinko-text-earn">up to 12220 ton</h2>#}
+{#                    </div>#}
+{#                    <div class="plinko-earn-div">#}
+{#                        <button type="button" class="btn btn-info plinko-earn-btn"> Start</button>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+    </div>
+
+    <div id="players" hidden>
+        <div class="container">
+            <div class="d-flex justify-content-center mt-4 mb-2">
+                <button type="button" class="btn btn-warning btn-lg plinko-btn-players mx-1">
+                    Players
+                    <img src="{% static 'images/tas1.png' %}" class="plinko-icon-size-players">
+                </button>
+            </div>
+            <div class="text-center plinko-point-text mt-15">
+                <div class="inline">601.658 T</div>
+                <div class="plinko-small-text">Total Share Balance</div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="plinko-total-players-box flex-md-fill">
+                    <div class="p-1 my-2 text-white plinko-total-players-box-item">
+
+                        <div class="tot-upper">
+                            Total Players
+                        </div>
+
+                        <div class="tot-lower">
+                            66,555,123
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="plinko-scroll-earn flex-md-fill">
+
+                    <div class="d-flex justify-content-between p-1 my-2 text-white plinko-players-box-item">
+                        <div class="players-list">
+                            <span class="part1">#1</span>
+                            <span class="part2">Arya</span>
+                        </div>
+                        <div class="part3 d-flex">
+                            <div class="d-flex flex-column">
+                                <div class="plinko-inline-block score-text-players">Score</div>
+                                <div class="plinko-inline-block rank-text-players">9,632,254<span>K</span></div>
+                            </div>
+
+                            <div class="plinko-inline-block plinko-shape first-shape-color"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between p-1 my-2 text-white plinko-players-box-item">
+                        <div class="players-list">
+                            <span class="part1">#2</span>
+                            <span class="part2">Anrays</span>
+                        </div>
+                        <div class="part3 d-flex">
+                            <div class="d-flex flex-column">
+                                <div class="plinko-inline-block score-text-players">Score</div>
+                                <div class="plinko-inline-block rank-text-players">555,525<span>K</span></div>
+                            </div>
+
+                            <div class="plinko-inline-block plinko-shape second-shape-color"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between p-1 my-2 text-white plinko-players-box-item">
+                        <div class="players-list">
+                            <span class="part1">#3</span>
+                            <span class="part2">Player 1</span>
+                        </div>
+                        <div class="part3 d-flex">
+                            <div class="d-flex flex-column">
+                                <div class="plinko-inline-block score-text-players">Score</div>
+                                <div class="plinko-inline-block rank-text-players">332,622<span>K</span></div>
+                            </div>
+                            <div class="plinko-inline-block plinko-shape third-shape-color"></div>
+                        </div>
+                    </div>
+
+                    <div class="plinko-small-text text-center">View More</div>
+
+                    <div class="d-flex justify-content-between p-1 my-2 text-white plinko-players-box-item">
+                        <div class="players-list">
+                            <span class="part1">#242</span>
+                            <span class="part2">You</span>
+                        </div>
+                        <div class="part3 d-flex">
+                            <div class="d-flex flex-column">
+                                <div class="plinko-inline-block score-text-players">Score</div>
+                                <div class="plinko-inline-block rank-text-players">128,002<span>K</span></div>
+                            </div>
+                            <div class="plinko-inline-block plinko-shape you-shape-color"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

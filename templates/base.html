@@ -1,0 +1,71 @@
+{% load static %}
+{% load render_partial %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>UNIPLOY</title>
+    {% include 'header_ref.html' %}
+</head>
+<body>
+<img src="{% static 'images/bg.png' %}" class="plinko-bg-img">
+{% block header_ref %}{% endblock %} {# برای تعریف ref های برای صفحات مختلف #}
+
+{% block content %}
+
+{% endblock %}
+<div id="footer_load" hidden>
+    <div class="plinko-footer">
+        <header class="justify-content-center">
+            <ul class="nav justify-content-center plinko-text-footer">
+                <li class="nav-item">
+                    <a href="#" id="home_btn" class="nav-link active text-center" aria-current="page"
+                       onclick="show_page('home',this.id)">
+                        <div class="text-center">
+                            <img class="plinko-footer-icons" src="{% static 'images/earn.png' %}">
+                        </div>
+                        <span class="plinko-text-footer-size">Earn</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="wallet_btn" class="nav-link text-center" aria-current="page"
+                       onclick="show_page('wallet',this.id)">
+                        <div class="text-center">
+                            <img class="plinko-footer-icons" src="{% static 'images/improve.png' %}">
+                        </div>
+                        <span class="plinko-text-footer-size">Improve</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="earn_btn" class="nav-link text-center" aria-current="page"
+                       onclick="show_page('earn',this.id)">
+                        <div class="text-center">
+                            <img class="plinko-footer-icons" src="{% static 'images/investment.png' %}">
+                        </div>
+                        <span class="plinko-text-footer-size">Investement</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="friend_btn" class="nav-link text-center" aria-current="page"
+                       onclick="show_page('friend',this.id)">
+                        <div class="text-center">
+                            <img class="plinko-footer-icons" src="{% static 'images/friends.png' %}">
+                        </div>
+                        <span class="plinko-text-footer-size">Friends</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</div>
+
+{% block footer_ref %}{% endblock %} {# برای تعریف js های برای صفحات مختلف #}
+{% include 'footer_ref.html' %}
+
+</body>
+
+</html>
