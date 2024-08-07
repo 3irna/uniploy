@@ -275,7 +275,28 @@ body {
     background-color: #252525c4;
     border-radius: 20px;
     height: 85%;
-    box-shadow: 0 -1px white;
+    box-shadow: 0 -1px white, 0px 1px black;
+}
+.plinko-guid-box-item{
+    background-color: #252525c4;
+    border-radius: 20px;
+    height: 85%;
+    box-shadow: 0 -1px white, 0px 1px black;
+    text-align: center;
+}
+.plinko-guid-box-item img{
+    width: 50%;
+    margin-top: 15px;
+}
+.plinko-guid-box-item p{
+    font-size: 10px;
+    font-weight: 500;
+}
+.plinko-guide-box {
+    height: 100px;
+    width: 27%;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 .d-flex {
@@ -346,7 +367,7 @@ body {
     background-color: #252525c4;
     height: 35px;
     border-radius: 20px;
-    box-shadow: 0 -1px white;
+    box-shadow: 0 -1px white, 0px 1px black;
 }
 
 .part1, part2, part3 {
@@ -387,7 +408,13 @@ body {
     margin-right: 3px;
     box-shadow: 0px 0px 9px 1px red;
 }
-
+.plinko-shape-guide {
+    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    margin-top: 7px;
+    margin-right: 3px;
+}
 .first-shape-color {
     background-color: #edcd52;
     box-shadow: 0px 0px 9px 1px #edcd52;
